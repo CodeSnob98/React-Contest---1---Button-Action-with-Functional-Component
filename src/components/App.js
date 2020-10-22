@@ -2,18 +2,23 @@ import React, { Component, useState } from "react";
 import "./../styles/App.css";
 
 function App() {
-  function handleClick() {
-    const el = document.createElement("p");
-    el.setAttribute("id", "para");
-    const t = document.createTextNode(
-      "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
-    ); // Create a text node
-    el.appendChild(t);
-    document.getElementById("main").appendChild(el);
+  const [display, setDisplay] = React.useState(false);
+  function handleClick() {}
+  if (display) {
+    return (
+      <div id="main">
+        <button id="click" onClick={() => handleClick()}></button>
+      </div>
+    );
   }
   return (
     <div id="main">
-      <button id="click" onClick={() => handleClick()}></button>
+      <button id="click"></button>
+      <p id="para">
+        {
+          "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
+        }
+      </p>
     </div>
   );
 }
