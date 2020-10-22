@@ -3,7 +3,9 @@ import "./../styles/App.css";
 
 function App() {
   const [display, setDisplay] = React.useState(false);
-  function handleClick() {}
+  function handleClick() {
+    setDisplay(true);
+  }
   if (display) {
     return (
       <div id="main">
