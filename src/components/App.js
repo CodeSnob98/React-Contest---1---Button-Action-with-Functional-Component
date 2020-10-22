@@ -6,21 +6,17 @@ function App() {
   function handleClick() {
     setDisplay(true);
   }
-  if (display) {
-    return (
-      <div id="main">
-        <button id="click" onClick={() => handleClick()}></button>
-      </div>
-    );
-  }
+
   return (
     <div id="main">
-      <button id="click"></button>
-      <p id="para">
-        {
-          "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
-        }
-      </p>
+      <button id="click" onClick={handleClick}></button>
+      {display && (
+        <p id="para">
+          {
+            "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
+          }
+        </p>
+      )}
     </div>
   );
 }
