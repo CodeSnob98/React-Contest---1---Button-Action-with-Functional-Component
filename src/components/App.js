@@ -9,7 +9,7 @@ function App() {
   if (display) {
     return (
       <div id="main">
-        <button id="click" onClick={handleClick}></button>
+        <button id="click" onClick={handleClick()}></button>
       </div>
     );
   }
